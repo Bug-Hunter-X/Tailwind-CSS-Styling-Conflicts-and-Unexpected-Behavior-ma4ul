@@ -1,0 +1,19 @@
+/* bugSolution.css */
+
+/* Ensure Tailwind's base styles are loaded correctly */
+@tailwind base;
+
+/* ... your custom styles (avoid overriding Tailwind's core styles) ... */
+
+/* Example of resolving a conflict (if needed) by using !important (use sparingly) */
+.text-xl {
+  font-size: 1.25rem !important; /* Force the desired font-size */
+}
+
+/* OR, more preferred approach, be more specific in your selectors */
+.container .text-xl { /* only applies to .text-xl within .container */
+    font-size: 1.25rem;
+}
+
+@tailwind components;
+@tailwind utilities;
